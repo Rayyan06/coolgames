@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title>Snake IO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+    #gameScreen {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    
+    <section class="vh-100">
+        <div class="container h-100">
+            <div class="h-100" id="initialScreen">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1>Multiplayer Snake</h1>
+
+                    <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="newGameButton"
+                    >
+                    Create New Game
+                    </button>
+                    <div class="pt-3">OR</div>
+                    <div class="form-group py-3">
+                         <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Game Code" id="gameCodeInput"/>
+                        </div>
+                    </div>
+                    <button 
+                        type="submit"
+                        class="btn btn-success"
+                        id="joinGameButton"
+                    >
+                    Join Game
+                    </button>
+                </div>
+            </div>
+                
+            <div id="gameScreen" class="h-100">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="index.js"></script>
+
+
+</body>
+</html>
+
