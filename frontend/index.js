@@ -111,12 +111,10 @@ function handleGameOver(data) {
     data = JSON.parse(data);
 
     if (data.winner === playerNumber) {
-        alert("You Lose!")
+        alert("You Win!")
     } else {
-        alert("You win!");
+        alert("You Lose!");
     }
-
-    gameActive = false;
 }
 
 function handleGameCode(gameCode) { 
