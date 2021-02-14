@@ -17,7 +17,9 @@
             <div class="h-100" id="initialScreen">
                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
                     <h1>Multiplayer Snake</h1>
-
+                    <div class="form-group py-3">
+                        <input type="text" class="form-control" placeholder="Enter Name" id="nameInput"/>
+                    </div>
                     <button
                     type="submit"
                     class="btn btn-success"
@@ -26,10 +28,9 @@
                     Create New Game
                     </button>
                     <div class="pt-3">OR</div>
-                    <div class="form-group py-3">
-                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Game Code" id="gameCodeInput"/>
-                        </div>
+
+                    <div class="form-group py-2">
+                        <input type="text" class="form-control" placeholder="Enter Game Code" id="gameCodeInput"/>
                     </div>
                     <button 
                         type="submit"
@@ -43,7 +44,10 @@
                 
             <div id="gameScreen" class="h-100">
                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                    <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+                    <div>
+                        <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+
+                    </div>
                     <canvas id="canvas"></canvas>
                 </div>
             </div>

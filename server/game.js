@@ -138,6 +138,7 @@ function getUpdatedVelocity(keyCode) {
             return {x: -1, y: 0}
 
         }
+        
         case 87: { // up
             return {x: 0, y: -1}
         }
