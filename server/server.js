@@ -44,7 +44,7 @@ io.on('connection', client => {
     }
 
     function handleNewGame() {
-        let roomName = makeid(2);
+        let roomName = makeid(1);
         clientRooms[client.id] = roomName;
         client.emit('gameCode', roomName);
 
@@ -70,6 +70,8 @@ io.on('connection', client => {
             console.error(e);
             return;
         }
+
+
 
         const vel = getUpdatedVelocity(keyCode);
 
