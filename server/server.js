@@ -70,13 +70,13 @@ io.on('connection', client => {
             console.error(e);
             return;
         }
+        playerVel = state[roomName.players[client.number - 1].vel;
 
 
-
-        const vel = getUpdatedVelocity(keyCode);
+        const vel = getUpdatedVelocity(keyCode, playerVel);
 
         if (vel) {
-            state[roomName].players[client.number - 1].vel = vel;
+            playerVel = vel;
         }
     }
 
