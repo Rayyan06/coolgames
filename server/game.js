@@ -131,23 +131,39 @@ function randomFood(state) {
 }
 
 
-function getUpdatedVelocity(keyCode) {
+function getUpdatedVelocity(keyCode, vel) {
 
     switch(keyCode) {
         case 65: { // left
+          if (vel.x!==1) {
             return {x: -1, y: 0}
+          } else {
+            return vel;
+          }
 
         }
         
         case 87: { // up
+          if (vel.y!==1) {
             return {x: 0, y: -1}
+          } else {
+            return vel;
+          }
         }
         case 68: { // right
+          if (vel.x!==-1) {
             return {x: 1, y: 0}
+          } else {
+            return vel;
+          }
 
         }
         case 83: { // up
+          if (vel.y!==-1) {
             return {x: 0, y: 1}
+          } else {
+            return vel;
+          }
 
         }
     }
